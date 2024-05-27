@@ -1,0 +1,18 @@
+/* Base Colors */
+:root {
+    --pink: #FAA0E2;
+}
+
+/* Footer */
+
+.footer {
+    background: var(--pink);
+    width: 100%;
+    bottom: 0;
+}
+
+.rectangle {
+    background: var(--pink);
+    width: 10px;
+    height: 10px;
+}
