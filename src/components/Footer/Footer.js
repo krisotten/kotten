@@ -16,7 +16,7 @@ function Footer() {
                     </div>
                     <div className={styles.socials} >
                         <SendIcon className={styles.mail} fontSize='large' />
-                        <SocialIcon url="https://tiktok.com" bgColor="transparent" className={styles.tiktok} />
+                        <SocialIcon url="https://tiktok.com" bgColor="transparent" />
                         <InstagramIcon className={styles.instagram} fontSize='large' />
                     </div>
                 </div>
