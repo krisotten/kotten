@@ -2,13 +2,17 @@ import logo from './logo.svg';
 import './App.css';
 import Navigation from './components/Navigation/Navigation.js';
 import Footer from './components/Footer/Footer.js';
-import Item from './components/Item/Item.js';
+import ItemList from './components/ItemList/ItemList.js';
 
 function App() {
+  const list = [{name: 'Swirl Crochet Mini Bag', price: "$39.99"}, {name: 'Swirl Crochet Mini Bag', price: "$39.99"}, {name: 'Swirl Crochet Mini Bag', price: "$39.99"},
+  {name: 'Swirl Crochet Mini Bag', price: "$39.99"}, {name: 'Swirl Crochet Mini Bag', price: "$39.99"}, {name: 'Swirl Crochet Mini Bag', price: "$39.99"}
+  ];
+
   return (
     <>
       <Navigation />
-      <Item name="Swirl Crochet Mini Bag" price="$39.99" />
+      <ItemList list={list} />
       <Footer />
     </>
   );
