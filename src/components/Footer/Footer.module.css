@@ -9,7 +9,7 @@
 /* Footer */
 .footer {
     background-color: var(--pink);
-    padding: 30px;
+    padding: 25px 30px 30px;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
@@ -25,34 +25,32 @@ footer {
 
 .rectangle {
     background: white;
-    width: 350px;
-    height: 45px;
-    border-radius: 15px;
+    width: 330px;
+    height: 40px;
+    border-radius: 12px;
 }
 
 .footerText {
     color: white;
     font-family: "Inter", sans-serif;
-    font-weight: 500;
-    font-size: 16px;
+    font-weight: 700;
+    font-size: 15px;
     line-height: 0;
 }
 
 .signUp {
     display: flex;
     flex-flow: column nowrap;
-    gap: 10px;
+    gap: 5px;
 }
 
 /* Social Media Icons */
 
 .instagram {
-    /* font-size: 45px; */
     color: white;
 }
 
 .mail {
-    /* font-size: 40px; */
     color: white;
     rotate: -45deg;
 }
