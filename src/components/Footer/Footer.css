@@ -5,14 +5,16 @@
 
 /* Footer */
 
-.footer {
-    background: var(--pink);
+.foot {
     width: 100%;
+    position: relative;
+    left: 0;
     bottom: 0;
+    background-color: var(--pink);
 }
 
-.rectangle {
+/* .rectangle {
     background: var(--pink);
     width: 10px;
     height: 10px;
-}
+} */
