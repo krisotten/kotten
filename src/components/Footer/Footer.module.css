@@ -9,17 +9,24 @@
 /* Footer */
 .footer {
     background-color: var(--pink);
-    padding: 40px;
+    padding: 30px;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: flex-end;
 }
 
+footer {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
 .rectangle {
     background: white;
     width: 350px;
-    height: 50px;
+    height: 45px;
     border-radius: 15px;
 }
 
@@ -27,7 +34,7 @@
     color: white;
     font-family: "Inter", sans-serif;
     font-weight: 500;
-    font-size: 17px;
+    font-size: 16px;
     line-height: 0;
 }
 
@@ -40,12 +47,12 @@
 /* Social Media Icons */
 
 .instagram {
-    font-size: 35px;
+    /* font-size: 45px; */
     color: white;
 }
 
 .mail {
-    font-size: 35px;
+    /* font-size: 40px; */
     color: white;
     rotate: -45deg;
 }
@@ -55,4 +62,8 @@
     flex-flow: row nowrap;
     gap: 20px;
     align-items: center;
+}
+
+.tiktok {
+    font-size: 40px;
 }
