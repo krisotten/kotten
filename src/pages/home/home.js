@@ -12,13 +12,15 @@ import skull from "../../img/skull.jpg";
 import mushroom from "../../img/mushroom.jpg";
 
 function Home() {
-    const list = [{name: 'Swirl Crochet Mini Bag', price: "$39.99", src: evilEye}, {name: 'Swirl Crochet Mini Bag', price: "$39.99", src: strawberry}, {name: 'Swirl Crochet Mini Bag', price: "$39.99", src: brown}];
+    const list = [{name: 'Swirl Crochet Mini Bag', price: "$39.99", src: evilEye}, {name: 'Swirl Crochet Mini Bag', price: "$39.99", src: strawberry}, {name: 'Swirl Crochet Mini Bag', price: "$39.99", src: brown}, {name: 'Swirl Crochet Mini Bag', price: "$39.99", src: skull}, {name: 'Swirl Crochet Mini Bag', price: "$39.99", src: mushroom}];
 
     return (
-        <div className={styles.itemList} >
-            {list.map(item => {
-                return <Item name={item.name} price={item.price} src={item.src} className={styles.item} />
-            })}
+        <div className={styles.itemContainer} >
+            <div className={styles.itemList}>
+                {list.map(item => {
+                    return <Item name={item.name} price={item.price} src={item.src} />
+                })}
+            </div>
         </div>
     );
 }

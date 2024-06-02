@@ -13,13 +13,15 @@ import { RouterProvider, createBrowserRouter, createRoutesFromElements, Route } 
 
 const appRouter = createBrowserRouter(createRoutesFromElements(
   <Route path="/" element={ <Root /> }>
-    <Route index element={ <ItemDetails />} />
+    <Route index element={ <Home />} />
   </Route>
 ));
 
 function App() {
   return (
+    <>
       <RouterProvider router={ appRouter } />
+    </>
   );
 }
 
