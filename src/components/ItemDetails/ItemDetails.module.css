@@ -1,0 +1,16 @@
+
+.image {
+    width: 500px;
+    height: 500px;
+    border-radius: 10px;
+}
+
+.itemContainer {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.itemDetails {
+    display: flex;
+    flex-flow: column nowrap;
+}
