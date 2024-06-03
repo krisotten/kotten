@@ -25,7 +25,7 @@ function Home() {
     return (
         <div className={styles.itemList}>
             {list.map(item => {
-                return (<Link key={list.indexOf(item)} to={{pathname: `/${item.name.replaceAll(' ', '_').toLowerCase()}`, state: test}}> 
+                return (<Link key={list.indexOf(item)} to={{pathname: `/${item.name.replaceAll(' ', '_').toLowerCase()}`}} state={item}> 
                     <Item src={item.src} name={item.name} price={item.price} />
                 </Link>)
             })}
