@@ -7,15 +7,17 @@ import evilEye from "../../img/evil_eye.jpg";
 import {useLocation} from 'react-router-dom';
 
 function ItemDetails(props) {
-    console.log(useLocation());
+    const location = useLocation();
+    const state = location.state;
+    const {src, name, price} = state;
 
     return (
         <div className={styles.itemContainer}>
-            <img src={evilEye} className={styles.image} />
+            <img src={src} className={styles.image} />
 
             <div className={styles.itemDetails}>
-                <h1>Test</h1>
-                <p className={styles.price} >Test</p>
+                <h1>{name}</h1>
+                <p className={styles.price} >{price}</p>
                 <p className={styles.description} >Mini crochet bag with swirl pattern. Handmade using 100% acrylic yarn. <br /><br /> Measures 6.5” x 7.5”</p>
                 <div className={styles.rectangle}>
                     <p className={styles.quantity}>-</p>
