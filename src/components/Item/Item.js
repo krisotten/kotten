@@ -1,5 +1,7 @@
 import styles from './Item.module.css';
 import evilEye from "./../../img/evil_eye.jpg";
+import {ItemContext} from '../../context/ItemContext.js';
+import React, {useContext} from 'react';
 
 function Item(props) {
     return (
