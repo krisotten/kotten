@@ -1,5 +1,7 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import { Link } from 'react-router-dom';
+
+import {ItemContext, ItemInfo} from '../../context/ItemContext.js';
 
 // CSS Module
 import styles from './home.module.css';
@@ -15,17 +17,16 @@ import skull from "../../img/skull.jpg";
 import mushroom from "../../img/mushroom.jpg";
 
 function Home() {
-    const MyContext = React.createContext();
 
     const list = [{name: 'Evil Eye Bag', price: "$39.99", src: evilEye}, {name: 'Strawberry Bag', price: "$39.99", src: strawberry}, {name: 'Brown Heart Bag', price: "$39.99", src: brown}, {name: 'Skull Crochet Bag', price: "$39.99", src: skull}, {name: 'Mushroom Bag', price: "$39.99", src: mushroom}];
+
+    const test = {name: 'Strawberry Bag', price: "$39.99", src: strawberry};
 
     return (
         <div className={styles.itemList}>
             {list.map(item => {
-                return (<Link key={list.indexOf(item)} to={`/${item.name.replaceAll(' ', '_').toLowerCase()}`}> 
-                    <MyContext.Provider value={item}>
-                        <Item name={item.name} price={item.price} src={item.src} /> 
-                    </MyContext.Provider>
+                return (<Link key={list.indexOf(item)} to={{pathname: `/${item.name.replaceAll(' ', '_').toLowerCase()}`, state: test}}> 
+                    <Item src={item.src} name={item.name} price={item.price} />
                 </Link>)
             })}
         </div>
