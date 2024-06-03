@@ -15,9 +15,9 @@ function Footer() {
                         <div className={styles.rectangle} />
                     </div>
                     <div className={styles.socials} >
-                        <SendIcon className={styles.mail} fontSize='large' />
-                        <SocialIcon url="https://tiktok.com" bgColor="transparent" />
-                        <InstagramIcon className={styles.instagram} fontSize='large' />
+                        <SendIcon className={`${styles.mail} ${styles.hvrGrow}`} fontSize='large' />
+                        <SocialIcon url="https://tiktok.com" bgColor="transparent" className={`${styles.hvrGrow}`} />
+                        <InstagramIcon className={`${styles.instagram} ${styles.hvrGrow}`} fontSize='large' />
                     </div>
                 </div>
             </footer>

@@ -5,7 +5,7 @@ import React, {useContext} from 'react';
 
 function Item(props) {
     return (
-        <div className={styles.item} >
+        <div className={`${styles.item} ${styles.hvrGrow}`} >
             <img src={props.src} className={styles.rectangle} />
             <div className={styles.itemText} >
                 <p className={styles.name} >{props.name}</p>
