@@ -7,8 +7,7 @@ import evilEye from "../../img/evil_eye.jpg";
 import {useLocation} from 'react-router-dom';
 
 function ItemDetails(props) {
-    // const { state } = useLocation();
-    // const { name, price, src } = state;
+    console.log(useLocation());
 
     return (
         <div className={styles.itemContainer}>
