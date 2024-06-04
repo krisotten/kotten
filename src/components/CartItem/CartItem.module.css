@@ -17,13 +17,13 @@
 
 /* Text */
 .name {
-    font-family: "Inter", sans-serif;
+    font-family: "Raleway", sans-serif;
     font-size: 18px;
     font-weight: 500;
 }
 
 .price {
-    font-family: "Inter", sans-serif;
+    font-family: "Raleway", sans-serif;
     font-size: 15px;
 }
 
@@ -40,7 +40,7 @@
 
 /* Quantity Input */
 .rectangle {
-    border: 3px solid var(--pink);
+    border: 2px solid var(--pink);
     width: 60px;
     height: 35px;
     border-radius: 100px;
@@ -51,15 +51,24 @@
     padding: 0px 15px;
 }
 
-.quantity {
+.minus {
     font-size: 25px;
-    font-family: "Inter", sans-serif;
-    font-weight: 300;
+    font-family: "Raleway", sans-serif;
+    font-weight: 400;
+    padding-bottom: 4px;
+}
+
+.plus {
+    font-size: 25px;
+    font-family: "Raleway", sans-serif;
+    font-weight: 400;
 }
 
 .quantityNum {
     font-size: 20px;
-    font-family: "Inter", sans-serif;
+    font-family: "Raleway", sans-serif;
+    padding-bottom: 3px;
+    font-weight: 400;
 }
 
 /* Icon */

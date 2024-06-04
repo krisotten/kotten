@@ -15,9 +15,9 @@ export default function CartItem(props) {
                 </div>
 
                 <div className={styles.rectangle}>
-                    <p className={styles.quantity}>-</p>
+                    <p className={styles.minus}>-</p>
                     <p className={styles.quantityNum}>1</p>
-                    <p className={styles.quantity}>+</p>
+                    <p className={styles.plus}>+</p>
                 </div>
 
                 <DeleteIcon className={`${styles.delete} ${styles.hvrGrow}`} />

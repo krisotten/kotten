@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
 /* Item Containers */
 .container {
@@ -15,7 +16,11 @@
     border: 1px solid black;
     border-radius: 40px;
 
-    padding: 35px 50px 0px;
+    padding: 0px 50px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    
 }
 
 .itemList {
@@ -29,7 +34,7 @@
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
-    font-family: "Inter", sans-serif;
+    font-family: "Raleway", sans-serif;
 }
 
 .line {
@@ -40,12 +45,12 @@
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
-    font-family: "Inter", sans-serif;
+    font-family: "Raleway", sans-serif;
     font-weight: 700;
 }
 
 .heading {
-    font-family: "Inter", sans-serif;
+    font-family: "Raleway", sans-serif;
     font-weight: 700;
     font-size: 25px;
 }
@@ -58,7 +63,7 @@
     width: 210px;
     height: 50px;
     font-size: 17px;
-    font-family: "Inter", sans-serif;
+    font-family: "Raleway", sans-serif;
     font-weight: 700;
     color: white;
     margin-top: 25px;
