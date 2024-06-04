@@ -44,7 +44,7 @@ export default function cart() {
                 </div>
 
                 <div className={styles.center}>
-                    <button className={styles.button} >Continue to Checkout</button>
+                    <button className={`${styles.button} ${styles.hvrGrow}`} >Continue to Checkout</button>
                 </div>
             </div>
 

@@ -23,6 +23,19 @@
 .itemDetails {
     display: flex;
     flex-flow: column nowrap;
+    gap: 20px;
+}
+
+.info {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 3px;
+}
+
+.buttons {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 5px;
 }
 
 /* Typography */
@@ -62,7 +75,7 @@ h1 {
 .minus {
     font-size: 25px;
     font-family: "Raleway", sans-serif;
-    font-weight: 340;
+    font-weight: 400;
     padding-bottom: 4px;
 }
 
@@ -90,4 +103,23 @@ button {
     font-weight: 700;
     color: white;
     margin-top: 25px;
+    cursor: pointer;
+}
+
+/* Grow */
+.hvrGrow {
+    display: inline-block;
+    vertical-align: middle;
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    transition-duration: 0.3s;
+    transition-property: transform;
+}
+
+.hvrGrow:hover,
+.hvrGrow:focus,
+.hvrGrow:active {
+    transform: scale(1.1);
 }

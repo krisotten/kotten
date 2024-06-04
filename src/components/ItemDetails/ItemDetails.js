@@ -14,15 +14,20 @@ function ItemDetails(props) {
             <img src={src} className={styles.image} />
 
             <div className={styles.itemDetails}>
-                <h1>{name}</h1>
-                <p className={styles.price} >{price}</p>
-                <p className={styles.description} >Mini crochet bag with swirl pattern. Handmade using 100% acrylic yarn. <br /><br /> Measures 6.5” x 7.5”</p>
-                <div className={styles.rectangle}>
-                    <p className={styles.minus}>-</p>
-                    <p className={styles.quantityNum}>1</p>
-                    <p className={styles.plus}>+</p>
+                <div className={styles.info}>
+                    <h1>{name}</h1>
+                    <p className={styles.price} >{price}</p>
+                    <p className={styles.description} >Mini crochet bag with swirl pattern. Handmade using 100% acrylic yarn. <br /><br /> Measures 6.5” x 7.5”</p>
                 </div>
-                <Link to="/cart" ><button>Add to Cart</button></Link>
+
+                <div className={styles.buttons}>
+                    <div className={styles.rectangle}>
+                        <p className={styles.minus}>-</p>
+                        <p className={styles.quantityNum}>1</p>
+                        <p className={styles.plus}>+</p>
+                    </div>
+                    <Link to="/cart" ><button className={styles.hvrGrow}>Add to Cart</button></Link>
+                </div>
             </div>
         </div>
     );

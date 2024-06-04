@@ -20,7 +20,7 @@ export default function CartItem(props) {
                     <p className={styles.quantity}>+</p>
                 </div>
 
-                <DeleteIcon className={styles.delete} />
+                <DeleteIcon className={`${styles.delete} ${styles.hvrGrow}`} />
             </div>
 
         </div>
