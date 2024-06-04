@@ -27,6 +27,10 @@
     font-size: 15px;
 }
 
+.namePrice {
+    width: 150px;
+}
+
 /* Image */
 .image {
     width: 200px;

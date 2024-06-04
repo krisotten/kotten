@@ -23,12 +23,14 @@ function Home() {
     const test = {name: 'Strawberry Bag', price: "$39.99", src: strawberry};
 
     return (
-        <div className={styles.itemList}>
-            {list.map(item => {
-                return (<Link key={list.indexOf(item)} to={{pathname: `/${item.name.replaceAll(' ', '_').toLowerCase()}`}} state={item}> 
-                    <Item src={item.src} name={item.name} price={item.price} />
-                </Link>)
-            })}
+        <div className={styles.container}>
+            <div className={styles.itemList}>
+                {list.map(item => {
+                    return (<Link key={list.indexOf(item)} to={{pathname: `/${item.name.replaceAll(' ', '_').toLowerCase()}`}} state={item}> 
+                        <Item src={item.src} name={item.name} price={item.price} />
+                    </Link>)
+                })}
+            </div>
         </div>
     );
 }

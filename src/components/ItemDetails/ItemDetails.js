@@ -18,9 +18,9 @@ function ItemDetails(props) {
                 <p className={styles.price} >{price}</p>
                 <p className={styles.description} >Mini crochet bag with swirl pattern. Handmade using 100% acrylic yarn. <br /><br /> Measures 6.5” x 7.5”</p>
                 <div className={styles.rectangle}>
-                    <p className={styles.quantity}>-</p>
+                    <p className={styles.minus}>-</p>
                     <p className={styles.quantityNum}>1</p>
-                    <p className={styles.quantity}>+</p>
+                    <p className={styles.plus}>+</p>
                 </div>
                 <Link to="/cart" ><button>Add to Cart</button></Link>
             </div>

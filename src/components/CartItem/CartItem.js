@@ -9,7 +9,7 @@ export default function CartItem(props) {
             <img src={props.src} className={styles.image} />
 
             <div className={styles.container} >
-                <div>
+                <div className={styles.namePrice}>
                     <p className={styles.name}>{props.name}</p>
                     <p className={styles.price}>{props.price}</p>
                 </div>
