@@ -1,19 +1,17 @@
-import evilEye from "../../img/evil_eye.jpg";
-
 import styles from './CartItem.module.css';
 
 import DeleteIcon from '@mui/icons-material/Delete';
 
-export default function CartItem() {
+export default function CartItem(props) {
     return (
         <div className={styles.containerWithImg}>
 
-            <img src={evilEye} className={styles.image} />
+            <img src={props.src} className={styles.image} />
 
             <div className={styles.container} >
                 <div>
-                    <p>Swirl Crochet Bag</p>
-                    <p>$39.99</p>
+                    <p className={styles.name}>{props.name}</p>
+                    <p className={styles.price}>{props.price}</p>
                 </div>
 
                 <div className={styles.rectangle}>
