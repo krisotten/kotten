@@ -1,0 +1,42 @@
+.containerWithImg {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-end;
+}
+
+.container {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+.image {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+}
+
+/* Quantity Input */
+
+.rectangle {
+    border: 3px solid var(--pink);
+    width: 60px;
+    height: 35px;
+    border-radius: 100px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 15px;
+}
+
+.quantity {
+    font-size: 25px;
+    font-family: "Inter", sans-serif;
+    font-weight: 300;
+}
+
+.quantityNum {
+    font-size: 20px;
+    font-family: "Inter", sans-serif;
+}
