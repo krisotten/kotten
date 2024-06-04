@@ -1,1 +1,17 @@
+.image {
+    width: 125px;
+    height: 125px;
+    border-radius: 10px;
+}
 
+.container {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-end;
+    gap: 100px;
+    
+}
+
+.textContainer {
+    width: 150px;
+}
