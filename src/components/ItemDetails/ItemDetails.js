@@ -2,9 +2,7 @@ import styles from './ItemDetails.module.css';
 
 import React from 'react';
 
-import evilEye from "../../img/evil_eye.jpg";
-
-import {useLocation} from 'react-router-dom';
+import {useLocation, Link} from 'react-router-dom';
 
 function ItemDetails(props) {
     const location = useLocation();
@@ -24,7 +22,7 @@ function ItemDetails(props) {
                     <p className={styles.quantityNum}>1</p>
                     <p className={styles.quantity}>+</p>
                 </div>
-                <button>Add to Cart</button>
+                <Link to="/cart" ><button>Add to Cart</button></Link>
             </div>
         </div>
     );
