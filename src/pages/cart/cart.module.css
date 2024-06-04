@@ -1,1 +1,6 @@
-
+.itemList {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 75px;
+    margin-left: 75px;
+}

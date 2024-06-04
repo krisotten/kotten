@@ -22,7 +22,7 @@ export default function CartItem() {
                     <p className={styles.quantity}>+</p>
                 </div>
 
-                <DeleteIcon />
+                <DeleteIcon className={styles.delete} />
             </div>
 
         </div>
