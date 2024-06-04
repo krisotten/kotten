@@ -4,6 +4,7 @@ import styles from './App.module.css';
 // Pages
 import Home from './pages/home/home.js';
 import Cart from './pages/cart/cart.js';
+import Shipping from './pages/shipping/shipping.js';
 
 // Components
 import Root from './components/Root/Root.js';
@@ -17,6 +18,7 @@ const appRouter = createBrowserRouter(createRoutesFromElements(
     <Route index element={ <Home />} />
     <Route path=":name" element={ <ItemDetails />} />
     <Route path="cart" element={ <Cart /> } />
+    <Route path="shipping" element={ <Shipping /> } />
   </Route>
 ));
 

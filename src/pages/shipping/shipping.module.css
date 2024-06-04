@@ -1,0 +1,61 @@
+/* Base Color */
+:root {
+    --pink: #FAA0E2;
+}
+
+/* Containers */
+.headContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.rectangle {
+    border: 3px solid var(--pink);
+    width: 60px;
+    height: 35px;
+    border-radius: 100px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 15px;
+}
+
+.priceContainer {
+    width: 469px;
+    height: 483px;
+    border: 1px solid black;
+    border-radius: 40px;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    
+}
+
+.container {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    gap: 100px;
+}
+
+.textWidth {
+    width: 500px;
+}
+
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Typography */
+.heading {
+    font-family: "Raleway", sans-serif;
+}
+
+.required {
+    font-family: "Raleway", sans-serif;
+}
+
+.boxText {
+    font-family: "Raleway", sans-serif;
+}
