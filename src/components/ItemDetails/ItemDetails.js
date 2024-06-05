@@ -4,10 +4,14 @@ import React, {useContext} from 'react';
 
 import {useLocation, Link} from 'react-router-dom';
 
+import { CartContext } from '../../context/CartContext.js';
+
 function ItemDetails(props) {
     const location = useLocation();
     const state = location.state;
     const {src, name, price} = state;
+
+    const {cart, addItem} = useContext(CartContext);
 
     return (
         <div className={styles.itemContainer}>
@@ -26,7 +30,7 @@ function ItemDetails(props) {
                         <p className={styles.quantityNum}>1</p>
                         <p className={styles.plus}>+</p>
                     </div>
-                    <Link to="/cart" ><button className={styles.hvrGrow} >Add to Cart</button></Link>
+                    <button className={styles.hvrGrow} onClick={() => {addItem({name: name, price: price, src: src})}} >Add to Cart</button>
                 </div>
             </div>
         </div>

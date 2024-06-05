@@ -12,6 +12,11 @@ import {CartContext} from '../../context/CartContext.js';
 function Navigation() {
     const { cart } = useContext(CartContext);
     let cartNumber = cart.length;
+    let cartDot = <></>;
+
+    if (cartNumber > 0) {
+        cartDot = <div className={styles.dot}><p className={styles.cartNum}>{cartNumber}</p></div>;
+    }
 
     return (
         <>
@@ -23,9 +28,7 @@ function Navigation() {
                     <Link to="/cart">
                         <div className={styles.cart}>
                             <ShoppingBagIcon className={styles.cartIcon} />
-                            <div className={styles.dot}>
-                                <p className={styles.cartNum}>{cartNumber}</p>
-                            </div>
+                            {cartDot}
                         </div>
                     </Link>
                 </div>

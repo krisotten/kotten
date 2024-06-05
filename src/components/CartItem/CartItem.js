@@ -2,7 +2,14 @@ import styles from './CartItem.module.css';
 
 import DeleteIcon from '@mui/icons-material/Delete';
 
+import { CartContext } from '../../context/CartContext.js';
+import { useContext } from 'react';
+
 export default function CartItem(props) {
+    const { removeItem } = useContext(CartContext);
+    let item = {name: props.name, price: props.price, src: props.src};
+    console.log(item);
+
     return (
         <div className={styles.containerWithImg}>
 
@@ -20,7 +27,7 @@ export default function CartItem(props) {
                     <p className={styles.plus}>+</p>
                 </div>
 
-                <DeleteIcon className={`${styles.delete} ${styles.hvrGrow}`} />
+                <DeleteIcon className={`${styles.delete} ${styles.hvrGrow}`} onClick={() => { removeItem(item)} } />
             </div>
 
         </div>

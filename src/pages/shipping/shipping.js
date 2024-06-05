@@ -6,16 +6,11 @@ import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 
 import ShipCartItem from '../../components/ShipCartItem/ShipCartItem.js';
 
-import evilEye from "../../img/evil_eye.jpg";
-import strawberry from "../../img/strawberry.jpg";
-
 import { CartContext } from '../../context/CartContext.js';
 import { useContext } from 'react';
 
 export default function Shipping() {
     const { cart } = useContext(CartContext);
-
-    const list = [{name: 'Evil Eye Bag', price: "$39.99", src: evilEye}, {name: 'Strawberry Bag', price: "$39.99", src: strawberry}];
 
     return (
         <div className={styles.container}>

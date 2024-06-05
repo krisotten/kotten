@@ -7,12 +7,14 @@ import brown from "../img/brown.jpg";
 export const CartContext = React.createContext();
 
 export function CartTracker({children}) {
-    const [cart, setCart] = useState([{name: 'Evil Eye Bag', price: "$39.99", src: evilEye}]);
+    const [cart, setCart] = useState([]);
 
-    const addItem = (item) => setCart((prev) => [...prev, item]);
+    const addItem = (item) => setCart(cart => [...cart, item]);
+
+    const removeItem = (item) => setCart(cart.splice(cart.indexOf(item), 1));
 
     return (
-        <CartContext.Provider value={{cart, addItem}}>
+        <CartContext.Provider value={{cart, setCart, addItem, removeItem}}>
             {children}
         </CartContext.Provider>
     );
