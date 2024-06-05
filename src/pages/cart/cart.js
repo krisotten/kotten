@@ -8,6 +8,13 @@ import { useContext } from 'react';
 
 export default function Cart() {
     const { cart } = useContext(CartContext);
+
+    let subtotal = 0;
+    cart.forEach(item => subtotal += Number(item.price.replace("$", "")));
+
+    let tax = subtotal * 0.07;
+    let shipping = 9;
+    let total = subtotal + tax + shipping;
     
     if (cart.length > 0) {
         return (
@@ -23,24 +30,24 @@ export default function Cart() {
 
                     <div className={styles.pricePortion} >
                         <p>Subtotal</p>
-                        <p>$39.99</p>
+                        <p>${subtotal}</p>
                     </div>
 
                     <div className={styles.pricePortion} >
                         <p>Shipping</p>
-                        <p>$7.99</p>
+                        <p>${shipping.toFixed(2)}</p>
                     </div>
 
                     <div className={styles.pricePortion} >
                         <p>Taxes</p>
-                        <p>$1.99</p>
+                        <p>${tax.toFixed(2)}</p>
                     </div>
 
                     <hr className={styles.line} />
 
                     <div className={styles.total} >
                         <p>TOTAL</p>
-                        <p>$53.99</p>
+                        <p>${total.toFixed(2)}</p>
                     </div>
 
                     <div className={styles.center}>
