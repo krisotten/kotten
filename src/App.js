@@ -1,3 +1,5 @@
+
+
 // CSS Module
 import styles from './App.module.css';
 
@@ -7,19 +9,19 @@ import Cart from './pages/cart/cart.js';
 import Shipping from './pages/shipping/shipping.js';
 
 // Components
-import Root from './components/Root/Root.js';
+import {Root} from './components/Root/Root.js';
 import ItemDetails from './components/ItemDetails/ItemDetails.js';
 
 // React Router
 import { RouterProvider, createBrowserRouter, createRoutesFromElements, Route } from 'react-router-dom';
 
 const appRouter = createBrowserRouter(createRoutesFromElements(
-  <Route path="/" element={ <Root /> }>
-    <Route index element={ <Home />} />
-    <Route path=":name" element={ <ItemDetails />} />
-    <Route path="cart" element={ <Cart /> } />
-    <Route path="shipping" element={ <Shipping /> } />
-  </Route>
+    <Route path="/" element={ <Root /> }>
+      <Route index element={ <Home />} />
+      <Route path=":name" element={ <ItemDetails />} />
+      <Route path="cart" element={ <Cart /> } />
+      <Route path="shipping" element={ <Shipping /> } />
+    </Route>
 ));
 
 function App() {

@@ -1,10 +1,10 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 import Navigation from '../Navigation/Navigation.js';
 import Footer from '../Footer/Footer.js';
 import { Outlet } from 'react-router-dom';
 
-function Root() {
+export function Root() {
     return (
         <>
             <Navigation />
@@ -13,5 +13,3 @@ function Root() {
         </>
     );
 }
-
-export default Root

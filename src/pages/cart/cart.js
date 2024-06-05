@@ -8,6 +8,7 @@ import strawberry from "../../img/strawberry.jpg";
 import brown from "../../img/brown.jpg";
 
 export default function cart() {
+
     const list = [{name: 'Evil Eye Bag', price: "$39.99", src: evilEye}, {name: 'Strawberry Bag', price: "$39.99", src: strawberry}, {name: 'Brown Heart Bag', price: "$39.99", src: brown}];
 
     return (

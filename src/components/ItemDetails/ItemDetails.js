@@ -1,6 +1,6 @@
 import styles from './ItemDetails.module.css';
 
-import React from 'react';
+import React, {useContext} from 'react';
 
 import {useLocation, Link} from 'react-router-dom';
 
@@ -26,7 +26,7 @@ function ItemDetails(props) {
                         <p className={styles.quantityNum}>1</p>
                         <p className={styles.plus}>+</p>
                     </div>
-                    <Link to="/cart" ><button className={styles.hvrGrow}>Add to Cart</button></Link>
+                    <Link to="/cart" ><button className={styles.hvrGrow} >Add to Cart</button></Link>
                 </div>
             </div>
         </div>
