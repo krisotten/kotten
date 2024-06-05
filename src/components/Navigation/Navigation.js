@@ -31,7 +31,11 @@ function Navigation() {
                 <img src={menu} className={styles.menu} />
                 <Link to="/" ><img src={kotten} className={styles.kotten} /></Link>
                 <div className={styles.rightNav} >
-                    <img src={search} className={styles.search}/>
+                    <div className={styles.rectangle}>
+                        <p className={styles.boxText} >Search...</p>
+                        <img src={search} className={styles.search}/>
+                    </div>
+
                     <Link to="/cart">
                         <div className={styles.cart}>
                             <img src={cartImg} className={styles.cartIcon} />
@@ -40,6 +44,7 @@ function Navigation() {
                     </Link>
                 </div>
             </nav>
+            
         </>
     );
 }
