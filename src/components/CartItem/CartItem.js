@@ -6,7 +6,7 @@ import { CartContext } from '../../context/CartContext.js';
 import { useContext } from 'react';
 
 export default function CartItem(props) {
-    const { cart, removeItem, increment } = useContext(CartContext);
+    const { cart, removeItem } = useContext(CartContext);
 
     return (
         <div className={styles.containerWithImg}>

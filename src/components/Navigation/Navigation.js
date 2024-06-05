@@ -14,7 +14,6 @@ function Navigation() {
 
     let total = 0;
     cart.forEach(item => total += item.amount);
-    console.log(total);
 
     let cartDot = <></>;
 
