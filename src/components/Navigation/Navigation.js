@@ -11,11 +11,15 @@ import {CartContext} from '../../context/CartContext.js';
 
 function Navigation() {
     const { cart } = useContext(CartContext);
-    let cartNumber = cart.length;
+
+    let total = 0;
+    cart.forEach(item => total += item.amount);
+    console.log(total);
+
     let cartDot = <></>;
 
-    if (cartNumber > 0) {
-        cartDot = <div className={styles.dot}><p className={styles.cartNum}>{cartNumber}</p></div>;
+    if (total > 0) {
+        cartDot = <div className={styles.dot}><p className={styles.cartNum}>{total}</p></div>;
     }
 
     return (
