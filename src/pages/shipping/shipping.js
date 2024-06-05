@@ -7,7 +7,7 @@ import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import ShipCartItem from '../../components/ShipCartItem/ShipCartItem.js';
 
 import { CartContext } from '../../context/CartContext.js';
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 
 import {useLocation} from 'react-router-dom';
 
@@ -18,6 +18,15 @@ export default function Shipping() {
     const state = location.state;
     const {subtotal, tax, shipping, total} = state;
 
+    const [email, setEmail] = useState("");
+    const [first, setFirst] = useState("");
+    const [last, setLast] = useState("");
+    const [address, setAddress] = useState("");
+    const [apartment, setApartment] = useState("");
+    const [city, setCity] = useState("");
+    const [addressState, setState] = useState("");
+    const [zip, setZip] = useState("");
+
     return (
         <div className={styles.container}>
             <div className={styles.textContainer} >
@@ -26,9 +35,8 @@ export default function Shipping() {
                         <p className={styles.heading}>Contact</p>
                         <p className={styles.required}>* Required</p>
                     </div>
-                    <div className={styles.rectangle}>
-                        <p className={styles.boxText}>Email *</p>
-                    </div>
+
+                    <input className={styles.rectangle} placeholder="Email *" onChange={(e) => setEmail(e.target.value)} />
                 </div>
 
                 <div>
@@ -39,32 +47,17 @@ export default function Shipping() {
 
                     <div className={styles.address}>
                         <div className={styles.twoRect}>
-                            <div className={styles.smallRect}>
-                                <p className={styles.boxText}>First Name *</p>
-                            </div>
-                            <div className={styles.smallRect}>
-                                <p className={styles.boxText}>Last Name *</p>
-                            </div>
+                            <input className={styles.rectangle} placeholder="First Name *" onChange={(e) => setFirst(e.target.value)}/>
+                            <input className={styles.rectangle} placeholder="Last Name *" onChange={(e) => setLast(e.target.value)}/>
                         </div>
 
-                        <div className={styles.rectangle}>
-                            <p className={styles.boxText}>Address *</p>
-                        </div>
-
-                        <div className={styles.rectangle}>
-                            <p className={styles.boxText}>Apartment, suite, etc. (optional) *</p>
-                        </div>
+                        <input className={styles.rectangle} placeholder="Address *" onChange={(e) => setAddress(e.target.value)}/>
+                        <input className={styles.rectangle} placeholder="Apartment, suite, etc. (optional) *" onChange={(e) => setApartment(e.target.value)}/>
 
                         <div className={styles.threeRect}>
-                            <div className={styles.smallRect}>
-                                <p className={styles.boxText}>City *</p>
-                            </div>
-                            <div className={styles.smallRect}>
-                                <p className={styles.boxText}>State *</p>
-                            </div>
-                            <div className={styles.smallRect}>
-                                <p className={styles.boxText}>Zip *</p>
-                            </div>
+                            <input className={styles.rectangle} placeholder="City *" onChange={(e) => setCity(e.target.value)}/>
+                            <input className={styles.rectangle} placeholder="State *" onChange={(e) => setState(e.target.value)}/>
+                            <input className={styles.rectangle} placeholder="Zip *" onChange={(e) => setZip(e.target.value)}/>
                         </div>
                     </div>
                 </div>
