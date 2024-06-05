@@ -1,7 +1,4 @@
 import styles from './Navigation.module.css';
-import MenuIcon from '@mui/icons-material/Menu';
-import SearchIcon from '@mui/icons-material/Search';
-import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
 
 import kotten from '../../img/kotten.png';
 import search from '../../img/search.png';
@@ -10,7 +7,7 @@ import cartImg from '../../img/cart.png';
 
 import {Link} from 'react-router-dom';
 
-import {useContext} from 'react';
+import {useContext, useState} from 'react';
 import {CartContext} from '../../context/CartContext.js';
 
 function Navigation() {
@@ -25,6 +22,8 @@ function Navigation() {
         cartDot = <div className={styles.dot}><p className={styles.cartNum}>{total}</p></div>;
     }
 
+    const [searchTerm, setTerm] = useState("");
+
     return (
         <>
             <nav>
@@ -32,8 +31,8 @@ function Navigation() {
                 <Link to="/" ><img src={kotten} className={styles.kotten} /></Link>
                 <div className={styles.rightNav} >
                     <div className={styles.searchDiv}>
-                        <input className={styles.rectangle} placeholder="Search" />
-                        <img src={search} className={styles.search}/>
+                        <input className={styles.rectangle} placeholder="Search" onChange={(e) => setTerm(e.target.value)} />
+                        <Link to="/search" state={searchTerm} ><img src={search} className={styles.search}/></Link>
                     </div>
 
                     <Link to="/cart">
