@@ -10,7 +10,10 @@ export default function Cart() {
     const { cart } = useContext(CartContext);
 
     let subtotal = 0;
-    cart.forEach(item => subtotal += Number(item.price.replace("$", "")));
+    cart.forEach(item => {
+        let i = Number(item.price.replace("$", "")) * Number(item.amount);
+        subtotal += i;
+    });
 
     let tax = subtotal * 0.07;
     let shipping = 9;
