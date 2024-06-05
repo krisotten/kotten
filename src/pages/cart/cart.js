@@ -3,18 +3,16 @@ import CartItem from '../../components/CartItem/CartItem.js';
 
 import { Link } from 'react-router-dom';
 
-import evilEye from "../../img/evil_eye.jpg";
-import strawberry from "../../img/strawberry.jpg";
-import brown from "../../img/brown.jpg";
+import { CartContext } from '../../context/CartContext.js';
+import { useContext } from 'react';
 
-export default function cart() {
-
-    const list = [{name: 'Evil Eye Bag', price: "$39.99", src: evilEye}, {name: 'Strawberry Bag', price: "$39.99", src: strawberry}, {name: 'Brown Heart Bag', price: "$39.99", src: brown}];
+export default function Cart() {
+    const { cart } = useContext(CartContext);
 
     return (
         <div className={styles.container}>
             <div className={styles.itemList}>
-                {list.map(item => {
+                {cart.map(item => {
                     return <CartItem src={item.src} name={item.name} price={item.price} />
                 })}
             </div>
