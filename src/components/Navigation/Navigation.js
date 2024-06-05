@@ -31,8 +31,8 @@ function Navigation() {
                 <img src={menu} className={styles.menu} />
                 <Link to="/" ><img src={kotten} className={styles.kotten} /></Link>
                 <div className={styles.rightNav} >
-                    <div className={styles.rectangle}>
-                        <p className={styles.boxText} >Search...</p>
+                    <div className={styles.searchDiv}>
+                        <input className={styles.rectangle} placeholder="Search" />
                         <img src={search} className={styles.search}/>
                     </div>
 
