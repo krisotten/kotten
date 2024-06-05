@@ -9,8 +9,14 @@ import ShipCartItem from '../../components/ShipCartItem/ShipCartItem.js';
 import { CartContext } from '../../context/CartContext.js';
 import { useContext } from 'react';
 
+import {useLocation} from 'react-router-dom';
+
 export default function Shipping() {
     const { cart } = useContext(CartContext);
+
+    const location = useLocation();
+    const state = location.state;
+    const {subtotal, tax, shipping, total} = state;
 
     return (
         <div className={styles.container}>
@@ -82,22 +88,22 @@ export default function Shipping() {
                 <div className={styles.price}>
                     <div className={styles.pricePortion} >
                         <p>Subtotal</p>
-                        <p>$39.99</p>
+                        <p>${subtotal}</p>
                     </div>
 
                     <div className={styles.pricePortion} >
                         <p>Shipping</p>
-                        <p>$7.99</p>
+                        <p>${shipping}</p>
                     </div>
 
                     <div className={styles.pricePortion} >
                         <p>Taxes</p>
-                        <p>$1.99</p>
+                        <p>${tax}</p>
                     </div>
 
                     <div className={styles.total} >
                         <p>TOTAL</p>
-                        <p>$53.99</p>
+                        <p>${total}</p>
                     </div>
                 </div>
 

@@ -15,6 +15,8 @@ export default function Cart() {
     let tax = subtotal * 0.07;
     let shipping = 9;
     let total = subtotal + tax + shipping;
+
+    const priceInfo = {subtotal: subtotal, tax: tax.toFixed(2), shipping: shipping.toFixed(2), total: total.toFixed(2)};
     
     if (cart.length > 0) {
         return (
@@ -51,7 +53,7 @@ export default function Cart() {
                     </div>
 
                     <div className={styles.center}>
-                        <Link to="/shipping" ><button className={`${styles.button} ${styles.hvrGrow}`} >Continue to Checkout</button></Link>
+                        <Link to="/shipping" state={priceInfo} ><button className={`${styles.button} ${styles.hvrGrow}`} >Continue to Checkout</button></Link>
                     </div>
                 </div>
 
