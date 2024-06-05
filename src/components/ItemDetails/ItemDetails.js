@@ -1,6 +1,6 @@
 import styles from './ItemDetails.module.css';
 
-import React, {useContext} from 'react';
+import React, {useContext, useState} from 'react';
 
 import {useLocation, Link} from 'react-router-dom';
 
@@ -12,6 +12,8 @@ function ItemDetails(props) {
     const {src, name, price} = state;
 
     const {cart, addItem} = useContext(CartContext);
+
+    const [amount, setAmount] = useState(1);
 
     return (
         <div className={styles.itemContainer}>
@@ -26,11 +28,11 @@ function ItemDetails(props) {
 
                 <div className={styles.buttons}>
                     <div className={styles.rectangle}>
-                        <p className={styles.minus}>-</p>
-                        <p className={styles.quantityNum}>1</p>
-                        <p className={styles.plus}>+</p>
+                        <p className={styles.minus} onClick={() => { if (amount > 1) { setAmount(amount => amount - 1) } }} >-</p>
+                        <p className={styles.quantityNum}>{amount}</p>
+                        <p className={styles.plus} onClick={() => setAmount(amount => amount + 1)} >+</p>
                     </div>
-                    <button className={styles.hvrGrow} onClick={() => {addItem({name: name, price: price, src: src})}} >Add to Cart</button>
+                    <button className={styles.hvrGrow} onClick={() => {addItem({name: name, price: price, src: src, amount: amount})}} >Add to Cart</button>
                 </div>
             </div>
         </div>
