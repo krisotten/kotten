@@ -79,7 +79,7 @@ export default function Shipping() {
             <div class={styles.priceContainer} >
                 <div className={styles.cartItems}>
                     {cart.map(item => {
-                        return <ShipCartItem src={item.src} name={item.name} price={item.price} />
+                        return <ShipCartItem src={item.src} name={item.name} price={item.price} amount={item.amount} />
                     })}
                 </div>
 

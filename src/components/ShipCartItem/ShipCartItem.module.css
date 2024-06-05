@@ -15,3 +15,31 @@
 .textContainer {
     width: 150px;
 }
+
+.cart {
+    position: relative;
+    height: 140px;
+    width: 140px;
+}
+
+.cartNum {
+    color: white;
+    font-weight: bolder;
+}
+
+.dot {
+    height: 35px;
+    width: 35px;
+    background-color: var(--pink);
+    border-radius: 50%;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    margin-top: -10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
