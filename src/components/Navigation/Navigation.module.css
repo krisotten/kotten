@@ -17,13 +17,24 @@ nav {
 }
 
 .navIcons {
-    transform: scale(1.3);
+    width: 25px;
+    height: 25px;
+}
+
+.menu {
+    width: 28px;
+}
+
+.search {
+    width: 25px;
+    height: 25px;
 }
 
 .rightNav {
     display: flex;
     flex-flow: row nowrap;
-    gap: 40px;
+    gap: 45px;
+    align-items: center;
 }
 
 /* Cart Number */
@@ -48,7 +59,8 @@ nav {
 }
 
 .cartIcon {
-    transform: scale(1.3);
+    width: 30px;
+    height: 30px;
     color: black;
 }
 

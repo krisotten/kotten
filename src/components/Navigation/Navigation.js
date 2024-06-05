@@ -2,7 +2,11 @@ import styles from './Navigation.module.css';
 import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
 import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
+
 import kotten from '../../img/kotten.png';
+import search from '../../img/search.png';
+import menu from '../../img/menu.png';
+import cartImg from '../../img/cart.png';
 
 import {Link} from 'react-router-dom';
 
@@ -24,13 +28,13 @@ function Navigation() {
     return (
         <>
             <nav>
-                <MenuIcon className={styles.navIcons} />
+                <img src={menu} className={styles.menu} />
                 <Link to="/" ><img src={kotten} className={styles.kotten} /></Link>
                 <div className={styles.rightNav} >
-                    <SearchIcon className={styles.navIcons}/>
+                    <img src={search} className={styles.search}/>
                     <Link to="/cart">
                         <div className={styles.cart}>
-                            <ShoppingBagIcon className={styles.cartIcon} />
+                            <img src={cartImg} className={styles.cartIcon} />
                             {cartDot}
                         </div>
                     </Link>
