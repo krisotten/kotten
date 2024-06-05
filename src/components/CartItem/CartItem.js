@@ -6,9 +6,7 @@ import { CartContext } from '../../context/CartContext.js';
 import { useContext } from 'react';
 
 export default function CartItem(props) {
-    const { removeItem } = useContext(CartContext);
-    let item = {name: props.name, price: props.price, src: props.src};
-    console.log(item);
+    const { cart, removeItem } = useContext(CartContext);
 
     return (
         <div className={styles.containerWithImg}>
@@ -27,7 +25,7 @@ export default function CartItem(props) {
                     <p className={styles.plus}>+</p>
                 </div>
 
-                <DeleteIcon className={`${styles.delete} ${styles.hvrGrow}`} onClick={() => { removeItem(item)} } />
+                <DeleteIcon className={`${styles.delete} ${styles.hvrGrow}`} onClick={() => { removeItem({name: props.name, price: props.price, src: props.src})} } />
             </div>
 
         </div>

@@ -1,9 +1,5 @@
 import React, {useState} from 'react';
 
-import evilEye from "../img/evil_eye.jpg";
-import strawberry from "../img/strawberry.jpg";
-import brown from "../img/brown.jpg";
-
 export const CartContext = React.createContext();
 
 export function CartTracker({children}) {
@@ -11,7 +7,10 @@ export function CartTracker({children}) {
 
     const addItem = (item) => setCart(cart => [...cart, item]);
 
-    const removeItem = (item) => setCart(cart.splice(cart.indexOf(item), 1));
+    const removeItem = (item) => {
+        const newCart = cart.filter(i => i.name !== item.name);
+        setCart(newCart);
+    };
 
     return (
         <CartContext.Provider value={{cart, setCart, addItem, removeItem}}>
