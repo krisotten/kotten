@@ -19,7 +19,7 @@ export default function Cart() {
     let shipping = 9;
     let total = subtotal + tax + shipping;
 
-    const priceInfo = {subtotal: subtotal, tax: tax.toFixed(2), shipping: shipping.toFixed(2), total: total.toFixed(2)};
+    const priceInfo = {subtotal: subtotal.toFixed(2), tax: tax.toFixed(2), shipping: shipping.toFixed(2), total: total.toFixed(2)};
     
     if (cart.length > 0) {
         return (
@@ -35,7 +35,7 @@ export default function Cart() {
 
                     <div className={styles.pricePortion} >
                         <p>Subtotal</p>
-                        <p>${subtotal}</p>
+                        <p>${subtotal.toFixed(2)}</p>
                     </div>
 
                     <div className={styles.pricePortion} >

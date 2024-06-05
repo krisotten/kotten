@@ -12,8 +12,30 @@ export function CartTracker({children}) {
         setCart(newCart);
     };
 
+    const decrement = (name) => {
+        const newCart = cart.map(i => {
+            if (i.name === name) {
+                i.amount -= 1;
+                return i;
+            }
+            return i;
+        });
+        setCart(newCart);
+    }
+
+    const increment = (name) => {
+        const newCart = cart.map(i => {
+            if (i.name === name) {
+                i.amount += 1;
+                return i;
+            }
+            return i;
+        });
+        setCart(newCart);
+    }
+
     return (
-        <CartContext.Provider value={{cart, setCart, addItem, removeItem}}>
+        <CartContext.Provider value={{cart, setCart, addItem, removeItem, decrement, increment}}>
             {children}
         </CartContext.Provider>
     );
