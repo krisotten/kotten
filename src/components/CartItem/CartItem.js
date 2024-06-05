@@ -20,7 +20,7 @@ export default function CartItem(props) {
                 </div>
 
                 <div className={styles.rectangle}>
-                    <p className={styles.minus} onClick={() => decrement(props.name)} >-</p>
+                    <p className={styles.minus} onClick={() => { if (props.amount > 1) { decrement(props.name) } }} >-</p>
                     <p className={styles.quantityNum}>{props.amount}</p>
                     <p className={styles.plus} onClick={() => increment(props.name)} >+</p>
                 </div>
