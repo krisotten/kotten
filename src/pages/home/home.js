@@ -7,16 +7,11 @@ import styles from './home.module.css';
 // Components
 import Item from '../../components/Item/Item.js';
 
-// Images
-import evilEye from "../../img/evil_eye.jpg";
-import strawberry from "../../img/strawberry.jpg";
-import brown from "../../img/brown.jpg";
-import skull from "../../img/skull.jpg";
-import mushroom from "../../img/mushroom.jpg";
+// Context
+import {ItemContext} from '../../context/ItemContext.js';
 
 function Home() {
-
-    const list = [{name: 'Evil Eye Bag', price: "$39.99", src: evilEye}, {name: 'Strawberry Bag', price: "$39.99", src: strawberry}, {name: 'Brown Heart Bag', price: "$39.99", src: brown}, {name: 'Skull Crochet Bag', price: "$39.99", src: skull}, {name: 'Mushroom Bag', price: "$39.99", src: mushroom}];
+    const list = useContext(ItemContext);
 
     return (
         <div className={styles.container}>

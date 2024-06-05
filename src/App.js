@@ -13,7 +13,9 @@ import Search from './pages/search/search.js';
 import {Root} from './components/Root/Root.js';
 import ItemDetails from './components/ItemDetails/ItemDetails.js';
 
+// Context
 import {CartTracker} from './context/CartContext.js';
+import {ItemInfo} from './context/ItemContext.js';
 
 // React Router
 import { RouterProvider, createBrowserRouter, createRoutesFromElements, Route, useContext } from 'react-router-dom';
@@ -32,7 +34,9 @@ function App() {
   return (
     <>
     <CartTracker>
-      <RouterProvider router={ appRouter } />
+      <ItemInfo>
+        <RouterProvider router={ appRouter } />
+      </ItemInfo>
     </CartTracker>
     </>
   );
