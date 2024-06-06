@@ -3,7 +3,6 @@ import { useContext } from 'react';
 
 import styles from './search.module.css';
 
-import SearchItem from '../../components/SearchItem/SearchItem.js';
 import Item from '../../components/Item/Item.js';
 
 import {ItemContext} from '../../context/ItemContext.js';
