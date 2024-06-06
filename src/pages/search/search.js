@@ -14,7 +14,7 @@ function Search() {
 
     const list = useContext(ItemContext);
     
-    const matches = list.filter(item => item.name.toLowerCase().includes(search));
+    const matches = list.filter(item => item.name.toLowerCase().includes(search.toLowerCase()));
 
     return (
         <>
