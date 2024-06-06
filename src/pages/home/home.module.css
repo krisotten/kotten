@@ -2,8 +2,7 @@
     display: flex;
     flex-flow: row wrap;
     gap: 50px;
-    justify-content: center;
-    align-items: flex-start;
+    margin-left: 143px;
 }
 
 /* Grow */
