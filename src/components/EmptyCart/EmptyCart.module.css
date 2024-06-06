@@ -1,0 +1,63 @@
+.image {
+    height: 150px;
+    width: 200px;
+}
+
+.heading {
+    font-family: "Raleway", sans-serif;
+    font-weight: 600;
+    font-size: 25px;
+}
+
+.container {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin: 76px 0px;
+}
+
+.description {
+    font-family: "Raleway", sans-serif;
+    font-size: 18px;
+}
+
+.text {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Button */
+.button {
+    background-color: var(--pink);
+    border-radius: 20px;
+    border: none;
+    width: 210px;
+    height: 50px;
+    font-size: 17px;
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+    color: white;
+    margin-top: 25px;
+}
+
+/* Grow */
+.hvrGrow {
+    display: inline-block;
+    vertical-align: middle;
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    transition-duration: 0.3s;
+    transition-property: transform;
+}
+
+.hvrGrow:hover,
+.hvrGrow:focus,
+.hvrGrow:active {
+    transform: scale(1.1);
+}

@@ -1,5 +1,7 @@
 import styles from './cart.module.css';
+
 import CartItem from '../../components/CartItem/CartItem.js';
+import EmptyCart from '../../components/EmptyCart/EmptyCart.js';
 
 import { Link } from 'react-router-dom';
 
@@ -63,6 +65,6 @@ export default function Cart() {
             </div>
         );
     } else {
-        return <></>;
+        return <EmptyCart />;
     }
 }
