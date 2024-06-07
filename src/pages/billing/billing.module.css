@@ -1,0 +1,113 @@
+.container {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    gap: 125px;
+}
+
+/* Cart and Price */
+
+.priceContainer {
+    width: 469px;
+    height: auto;
+    border: 1px solid black;
+    border-radius: 40px;
+    padding: 50px 0px;
+}
+
+.cartItems {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 30px;
+    margin-left: 50px;
+}
+
+.line {
+    margin: 50px 50px;
+}
+
+.price {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    gap: 15px;
+}
+
+.pricePortion {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    font-family: "Raleway", sans-serif;
+    width: 350px;
+    line-height: 0;
+}
+
+.total {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+    width: 350px;
+    line-height: 0;
+}
+
+/* Input Boxes */
+
+.textContainer {
+    width: 550px;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 25px;
+}
+
+.twoRect {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 10px;
+}
+
+.rectangle {
+    border: 1px solid var(--pink);
+    height: 45px;
+    border-radius: 15px;
+    width: 94%;
+
+    display: flex;
+    align-items: center;
+    padding: 0px 15px;
+
+    font-family: "Raleway", sans-serif;
+}
+
+.headContainer {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+.heading {
+    font-family: "Raleway", sans-serif;
+    font-size: 20px;
+    line-height: 0.7;
+    font-weight: 500;
+}
+
+.required {
+    font-family: "Raleway", sans-serif;
+    font-size: 12px;
+    line-height: 0;
+}
+
+.address {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 10px;
+}
+
+.threeRect {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 10px;
+}
