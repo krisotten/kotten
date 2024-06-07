@@ -9,7 +9,7 @@
 
 .priceContainer {
     width: 469px;
-    height: auto;
+    height: fit-content;
     border: 1px solid black;
     border-radius: 40px;
     padding: 50px 0px;
@@ -104,10 +104,61 @@
     display: flex;
     flex-flow: column nowrap;
     gap: 10px;
+    margin-top: 20px;
 }
 
 .threeRect {
     display: flex;
     flex-flow: row nowrap;
     gap: 10px;
+}
+
+.checkLabel {
+    font-family: "Raleway", sans-serif;
+    font-size: 15px;
+}
+
+/* Button */
+
+.button {
+    background-color: var(--pink);
+    border-radius: 20px;
+    border: none;
+    width: 125px;
+    height: 50px;
+    font-size: 17px;
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+    color: white;
+    margin-top: 25px;
+}
+
+.buttonContainer {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.backButton {
+    color: var(--pink);
+    margin-top: 25px;
+}
+
+/* Grow */
+.hvrGrow {
+    display: inline-block;
+    vertical-align: middle;
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    transition-duration: 0.3s;
+    transition-property: transform;
+}
+
+.hvrGrow:hover,
+.hvrGrow:focus,
+.hvrGrow:active {
+    transform: scale(1.1);
 }

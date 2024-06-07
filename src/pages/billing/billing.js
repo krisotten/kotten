@@ -1,11 +1,12 @@
 import { CartContext } from '../../context/CartContext.js';
 import { useContext, useState } from 'react';
 
-import {useLocation} from 'react-router-dom';
+import { useLocation, Link } from 'react-router-dom';
 
 import styles from './billing.module.css';
 
 import ShipCartItem from '../../components/ShipCartItem/ShipCartItem.js';
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 
 function Billing() {
     const { cart } = useContext(CartContext);
@@ -16,6 +17,7 @@ function Billing() {
     
     return (
         <div className={styles.container}>
+
             <div className={styles.textContainer} >
                 <div>
                     <div className={styles.headContainer}>
@@ -50,6 +52,8 @@ function Billing() {
                         <p className={styles.required}>* Required</p>
                     </div>
 
+                    <label className={styles.checkLabel}> <input type="checkbox" checked="checked" className={styles.checkbox} /> Use shipping address</label>
+
                     <div className={styles.address}>
                         <div className={styles.twoRect}>
                             <input className={styles.rectangle} placeholder="First Name *"/>
@@ -65,6 +69,11 @@ function Billing() {
                             <input className={styles.rectangle} placeholder="Zip *"/>
                         </div>
                     </div>
+                </div>
+
+                <div className={styles.buttonContainer}>
+                    <Link to="/shipping" ><ArrowBackIcon className={`${styles.backButton} ${styles.hvrGrow}`} /></Link>
+                    <Link to="/billing" state={state}><button className={`${styles.button} ${styles.hvrGrow}`}>Checkout</button></Link>
                 </div>
 
             </div>
@@ -99,8 +108,8 @@ function Billing() {
                         <p>${total}</p>
                     </div>
                 </div>
-
             </div>
+
         </div>
     );
 }
